@@ -21,7 +21,7 @@ public class Transacao {
 
     private String destinatario;
 
-    private int valor;
+    private float  valor;
 
     private LocalDate horarioDaTransacao;
 
@@ -41,10 +41,10 @@ public class Transacao {
         this.destinatario = destinatario;
     }
 
-    public int getValor() {
+    public float  getValor() {
         return valor;
     }
-    public void setValor(int valor) {
+    public void setValor(float  valor) {
         this.valor = valor;
     }
     

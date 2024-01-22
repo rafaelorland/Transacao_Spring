@@ -16,7 +16,7 @@ public class Usuario {
 
     private String nome;
 
-    private int saldo;
+    private float saldo;
 
     private String email;
 
@@ -31,10 +31,10 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public int getSaldo() {
+    public float getSaldo() {
         return saldo;
     }
-    public void setSaldo(int saldo) {
+    public void setSaldo(float saldo) {
         this.saldo = saldo;
     }
 

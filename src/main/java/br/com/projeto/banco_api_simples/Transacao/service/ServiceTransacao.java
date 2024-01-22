@@ -21,7 +21,9 @@ public class ServiceTransacao {
     @Autowired
     TransacaoRepository transacaoRepository;
 
-    public ResponseEntity<?> fazerTransacao(int remetenteId, int destinatarioId, int valor) {
+
+    // Metódo de transação entre usuários
+    public ResponseEntity<?> fazerTransacao(int remetenteId, int destinatarioId, float  valor) {
 
         if (usuarioRepository.existsById(remetenteId) && usuarioRepository.existsById(destinatarioId)) {
 
@@ -50,7 +52,12 @@ public class ServiceTransacao {
             }
 
         } else {
-            return new ResponseEntity<>("Usuário(s) não encontrado(s)", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Usuário não encontrado", HttpStatus.BAD_REQUEST);
         }
+    }
+
+    // Método para mostrar o histórico
+    public ResponseEntity<?> historicoDeTransacao () {
+        return new ResponseEntity<>(transacaoRepository.findAll() ,HttpStatus.OK);
     }
 }
