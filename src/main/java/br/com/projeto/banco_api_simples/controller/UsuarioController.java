@@ -1,7 +1,6 @@
 package br.com.projeto.banco_api_simples.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,8 +25,8 @@ public class UsuarioController {
 
     //Buscar Usuário
     @GetMapping("/user")
-    public ResponseEntity<?> buscarUsuario(@RequestParam(required = false) String busca){
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<?> buscarUsuario(@RequestParam(required = false) String seach){
+        return serviceUsuario.buscarUsuário(seach);
     }
 
 }

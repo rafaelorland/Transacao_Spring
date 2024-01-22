@@ -68,6 +68,20 @@ public class ServiceUsuario {
         }
         
     }
+
+    //Buscar Usuário
+    public ResponseEntity<?> buscarUsuário(String nome){
+
+        if (nome == null) {
+            mensagem.setMensagem("Usuário não encontrado");
+            return new ResponseEntity<>(mensagem, HttpStatus.BAD_REQUEST);
+        } else {
+            return new ResponseEntity<>(usuarioRepository.findTop10ByNomeStartingWith(nome).reversed(), HttpStatus.OK);
+        }
+
+        
+
+    }
     
     
 }
