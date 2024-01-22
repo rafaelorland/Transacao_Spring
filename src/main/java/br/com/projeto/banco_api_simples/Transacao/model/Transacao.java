@@ -1,4 +1,4 @@
-package br.com.projeto.banco_api_simples.model;
+package br.com.projeto.banco_api_simples.Transacao.model;
 
 import java.util.Date;
 import java.util.UUID;

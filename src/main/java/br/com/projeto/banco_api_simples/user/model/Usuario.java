@@ -1,4 +1,4 @@
-package br.com.projeto.banco_api_simples.model;
+package br.com.projeto.banco_api_simples.user.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package br.com.projeto.banco_api_simples.model.Component;
+package br.com.projeto.banco_api_simples.Component;
 
 import org.springframework.stereotype.Component;
 

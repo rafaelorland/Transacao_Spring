@@ -1,14 +1,15 @@
-package br.com.projeto.banco_api_simples.service;
+package br.com.projeto.banco_api_simples.user.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import br.com.projeto.banco_api_simples.model.CriarUsuario;
-import br.com.projeto.banco_api_simples.model.Usuario;
-import br.com.projeto.banco_api_simples.model.Component.Mensagem;
-import br.com.projeto.banco_api_simples.repository.UsuarioRepository;
+import br.com.projeto.banco_api_simples.Component.Mensagem;
+import br.com.projeto.banco_api_simples.Transacao.service.ValidarEmail;
+import br.com.projeto.banco_api_simples.user.model.CriarUsuario;
+import br.com.projeto.banco_api_simples.user.model.Usuario;
+import br.com.projeto.banco_api_simples.user.repository.UsuarioRepository;
 
 @Service
 public class ServiceUsuario {

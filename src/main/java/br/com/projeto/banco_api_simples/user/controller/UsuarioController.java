@@ -1,4 +1,4 @@
-package br.com.projeto.banco_api_simples.controller;
+package br.com.projeto.banco_api_simples.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.projeto.banco_api_simples.model.CriarUsuario;
-import br.com.projeto.banco_api_simples.service.ServiceUsuario;
+import br.com.projeto.banco_api_simples.user.model.CriarUsuario;
+import br.com.projeto.banco_api_simples.user.service.ServiceUsuario;
 
 @RestController
 public class UsuarioController {
