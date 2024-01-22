@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import br.com.projeto.banco_api_simples.Component.Mensagem;
-import br.com.projeto.banco_api_simples.Transacao.service.ValidarEmail;
+import br.com.projeto.banco_api_simples.Component.ValidarEmail;
 import br.com.projeto.banco_api_simples.user.model.CriarUsuario;
 import br.com.projeto.banco_api_simples.user.model.Usuario;
 import br.com.projeto.banco_api_simples.user.repository.UsuarioRepository;

@@ -1,6 +1,6 @@
 package br.com.projeto.banco_api_simples.Transacao.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.UUID;
 
 import jakarta.persistence.Entity;
@@ -23,7 +23,7 @@ public class Transacao {
 
     private int valor;
 
-    private Date horarioDaTransacao;
+    private LocalDate horarioDaTransacao;
 
     //GET and SET
 
@@ -48,10 +48,10 @@ public class Transacao {
         this.valor = valor;
     }
     
-    public Date getHorarioDaTransacao() {
+    public LocalDate getHorarioDaTransacao() {
         return horarioDaTransacao;
     }
-    public void setHorarioDaTransacao(Date horarioDaTransacao) {
+    public void setHorarioDaTransacao(LocalDate horarioDaTransacao) {
         this.horarioDaTransacao = horarioDaTransacao;
     }
     
