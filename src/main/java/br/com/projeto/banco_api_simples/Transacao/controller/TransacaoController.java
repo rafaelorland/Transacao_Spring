@@ -17,7 +17,7 @@ public class TransacaoController {
     ServiceTransacao serviceTransacao;
 
     @GetMapping("")
-    public ResponseEntity<?> fazerTransacao(@RequestParam int remetente, int destinatario, float valor) {
+    public ResponseEntity<?> fazerTransacao(@RequestParam(required = false) int remetente, int destinatario, float valor) {
         return serviceTransacao.fazerTransacao(remetente, destinatario, valor);
     }
 
