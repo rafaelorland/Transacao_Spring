@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.projeto.banco_api_simples.service.CriarUsuario;
+import br.com.projeto.banco_api_simples.model.CriarUsuario;
 import br.com.projeto.banco_api_simples.service.ServiceUsuario;
 
 @RestController
@@ -26,7 +26,7 @@ public class UsuarioController {
 
     //Buscar Usuário
     @GetMapping("/user")
-    public ResponseEntity<?> buscarUsuario(@RequestParam String busca){
+    public ResponseEntity<?> buscarUsuario(@RequestParam(required = false) String busca){
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

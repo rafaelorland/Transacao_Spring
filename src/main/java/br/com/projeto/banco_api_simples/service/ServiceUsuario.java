@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import br.com.projeto.banco_api_simples.model.CriarUsuario;
 import br.com.projeto.banco_api_simples.model.Usuario;
 import br.com.projeto.banco_api_simples.model.Component.Mensagem;
 import br.com.projeto.banco_api_simples.repository.UsuarioRepository;
@@ -33,7 +34,7 @@ public class ServiceUsuario {
                 return new ResponseEntity<>(mensagem, HttpStatus.BAD_REQUEST);
             }
             // Verificar Senha não for nula
-            else if (obj.getSenha() == null) {
+            else if (obj.getSenha() == null || obj.getSenha().isEmpty()) {
     
                 mensagem.setMensagem("Insirar uma senha!");
     
@@ -63,7 +64,7 @@ public class ServiceUsuario {
                 return new ResponseEntity<>(usuarioRepository.save(novoUsuario), HttpStatus.CREATED);
             }
         } catch (Exception e) {
-            return new ResponseEntity<>(e, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>("Error no servidor", HttpStatus.INTERNAL_SERVER_ERROR);
         }
         
     }
